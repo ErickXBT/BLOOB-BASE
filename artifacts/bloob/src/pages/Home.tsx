@@ -1,5 +1,6 @@
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
+import VideoSection from "@/components/sections/VideoSection";
 import Stats from "@/components/sections/Stats";
 import HybridArchitecture from "@/components/sections/HybridArchitecture";
 import Features from "@/components/sections/Features";
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 pt-20">
         <Hero />
+        <VideoSection />
         <Stats />
         <HybridArchitecture />
         <Features />
