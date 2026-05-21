@@ -136,10 +136,10 @@ export default function WalletApp() {
 
       {/* Top bar */}
       <header className="flex items-center justify-between px-4 py-4 border-b border-white/6">
-        <div className="flex items-center gap-2">
-          <img src={bloobLogo} alt="BLOOB" className="w-7 h-7" />
-          <span className="font-black text-sm">BLOOB Wallet</span>
-        </div>
+        <Link href="/" className="flex items-center gap-2 group">
+          <img src={bloobLogo} alt="BLOOB" className="w-7 h-7 group-hover:scale-110 transition-transform" />
+          <span className="font-black text-sm group-hover:text-primary transition-colors">BLOOB Wallet</span>
+        </Link>
 
         <div className="flex items-center gap-2">
           {/* Network badge */}

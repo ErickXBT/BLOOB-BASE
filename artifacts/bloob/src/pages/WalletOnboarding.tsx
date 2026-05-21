@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import { Eye, EyeOff, Copy, Check, AlertTriangle, ArrowLeft, Loader2, KeyRound, FileKey } from "lucide-react";
 import { useWallet } from "@/contexts/WalletContext";
 import bloobLogo from "@assets/bloob_logo.png";
@@ -105,9 +105,13 @@ export default function WalletOnboarding() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/8 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="w-full max-w-md relative z-10">
-        {/* Logo */}
-        <div className="flex justify-center mb-8">
-          <img src={bloobLogo} alt="BLOOB" className="w-12 h-12" />
+        {/* Top nav */}
+        <div className="flex items-center justify-between mb-10">
+          <Link href="/" className="flex items-center gap-2 text-muted-foreground hover:text-white transition-colors text-sm font-medium group">
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
+            Back to BLOOB
+          </Link>
+          <img src={bloobLogo} alt="BLOOB" className="w-8 h-8" />
         </div>
 
         <AnimatePresence mode="wait">
