@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import { motion } from "framer-motion";
 import { LogOut, Settings, Copy, Check, LayoutDashboard, ArrowUpRight, ArrowDownLeft, RefreshCw, ChevronDown, Key, Trash2, X } from "lucide-react";
 import { useWallet } from "@/contexts/WalletContext";
