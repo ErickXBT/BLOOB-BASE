@@ -7,6 +7,9 @@ import Home from "@/pages/Home";
 import SmsWallet from "@/pages/SmsWallet";
 import RoadmapPage from "@/pages/RoadmapPage";
 import NetworkPage from "@/pages/NetworkPage";
+import WalletOnboarding from "@/pages/WalletOnboarding";
+import WalletApp from "@/pages/WalletApp";
+import { WalletProvider } from "@/contexts/WalletContext";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
@@ -19,15 +22,19 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <Switch>
-            <Route path="/" component={Home} />
-            <Route path="/sms-wallet" component={SmsWallet} />
-            <Route path="/roadmap" component={RoadmapPage} />
-            <Route path="/network" component={NetworkPage} />
-            <Route component={NotFound} />
-          </Switch>
-        </WouterRouter>
+        <WalletProvider>
+          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+            <Switch>
+              <Route path="/" component={Home} />
+              <Route path="/sms-wallet" component={SmsWallet} />
+              <Route path="/roadmap" component={RoadmapPage} />
+              <Route path="/network" component={NetworkPage} />
+              <Route path="/wallet" component={WalletOnboarding} />
+              <Route path="/wallet/app" component={WalletApp} />
+              <Route component={NotFound} />
+            </Switch>
+          </WouterRouter>
+        </WalletProvider>
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>

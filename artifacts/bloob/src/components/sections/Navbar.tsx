@@ -29,9 +29,11 @@ export default function Navbar() {
           <a href="#docs" className="hidden sm:block text-sm font-medium text-muted-foreground hover:text-white transition-colors">
             Docs
           </a>
-          <Button className="bg-primary text-white hover:bg-primary/90 font-semibold rounded-full px-6">
-            Get Started
-          </Button>
+          <Link href="/wallet">
+            <Button className="bg-primary text-white hover:bg-primary/90 font-semibold rounded-full px-6">
+              Get Started
+            </Button>
+          </Link>
         </div>
       </div>
     </motion.header>
