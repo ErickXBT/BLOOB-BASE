@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import VideoSection from "@/components/sections/VideoSection";
 import Stats from "@/components/sections/Stats";
 import HybridArchitecture from "@/components/sections/HybridArchitecture";
+import VideoFeatures from "@/components/sections/VideoFeatures";
 import Features from "@/components/sections/Features";
 import AiAssistant from "@/components/sections/AiAssistant";
 import Merchant from "@/components/sections/Merchant";
@@ -21,6 +22,7 @@ export default function Home() {
         <VideoSection />
         <Stats />
         <HybridArchitecture />
+        <VideoFeatures />
         <Features />
         <AiAssistant />
         <Merchant />
