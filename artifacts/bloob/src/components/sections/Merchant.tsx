@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { QrCode, BarChart3, Webhook, RefreshCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 const merchantFeatures = [
   {
@@ -101,9 +102,11 @@ export default function Merchant() {
             <h3 className="text-2xl font-bold mb-2 text-white">Merchant Beta Available</h3>
             <p className="text-primary/80 font-medium">No subscription · 0.1% fee · Settled in USDC</p>
           </div>
-          <Button size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-full font-bold px-8 w-full md:w-auto">
-            Join Beta Program →
-          </Button>
+          <Link href="/beta">
+            <Button size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-full font-bold px-8 w-full md:w-auto">
+              Join Beta Program →
+            </Button>
+          </Link>
         </motion.div>
 
       </div>
