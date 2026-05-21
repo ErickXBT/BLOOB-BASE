@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import SmsWallet from "@/pages/SmsWallet";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ function App() {
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <Switch>
             <Route path="/" component={Home} />
+            <Route path="/sms-wallet" component={SmsWallet} />
             <Route component={NotFound} />
           </Switch>
         </WouterRouter>

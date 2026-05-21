@@ -22,7 +22,7 @@ export default function Navbar() {
           <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
           <a href="#roadmap" className="hover:text-white transition-colors">Roadmap</a>
           <a href="#network" className="hover:text-white transition-colors">Network</a>
-          <a href="#sms-wallet" className="hover:text-white transition-colors">SMS Wallet</a>
+          <Link href="/sms-wallet" className="hover:text-white transition-colors">SMS Wallet</Link>
         </nav>
 
         <div className="flex items-center gap-6">
