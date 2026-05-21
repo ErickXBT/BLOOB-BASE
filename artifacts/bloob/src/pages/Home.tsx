@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex min-h-[100dvh] flex-col relative w-full overflow-hidden">
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 pt-20">
         <Hero />
         <Stats />
         <HybridArchitecture />

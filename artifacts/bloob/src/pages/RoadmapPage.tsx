@@ -208,7 +208,7 @@ export default function RoadmapPage() {
   return (
     <div className="flex min-h-[100dvh] flex-col">
       <Navbar />
-      <main className="flex-1 py-16 md:py-24">
+      <main className="flex-1 pt-32 pb-16 md:pb-24">
         <div className="container mx-auto px-4 md:px-8">
 
           {/* Header */}

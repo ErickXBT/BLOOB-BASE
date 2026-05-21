@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function Navbar() {
   return (
     <motion.header 
-      className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/60 backdrop-blur-xl transition-all"
+      className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-xl"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
