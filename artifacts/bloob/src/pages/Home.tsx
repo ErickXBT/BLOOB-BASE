@@ -13,7 +13,7 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-[100dvh] flex-col relative w-full overflow-hidden bg-background">
+    <div className="flex min-h-[100dvh] flex-col relative w-full overflow-hidden">
       <Navbar />
       <main className="flex-1">
         <Hero />
