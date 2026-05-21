@@ -20,7 +20,7 @@ export default function Navbar() {
         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-muted-foreground">
           <a href="#features" className="hover:text-white transition-colors">Features</a>
           <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
-          <a href="#roadmap" className="hover:text-white transition-colors">Roadmap</a>
+          <Link href="/roadmap" className="hover:text-white transition-colors">Roadmap</Link>
           <a href="#network" className="hover:text-white transition-colors">Network</a>
           <Link href="/sms-wallet" className="hover:text-white transition-colors">SMS Wallet</Link>
         </nav>

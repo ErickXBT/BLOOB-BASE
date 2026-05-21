@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import SmsWallet from "@/pages/SmsWallet";
+import RoadmapPage from "@/pages/RoadmapPage";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ function App() {
           <Switch>
             <Route path="/" component={Home} />
             <Route path="/sms-wallet" component={SmsWallet} />
+            <Route path="/roadmap" component={RoadmapPage} />
             <Route component={NotFound} />
           </Switch>
         </WouterRouter>
