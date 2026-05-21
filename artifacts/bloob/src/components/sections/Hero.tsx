@@ -27,9 +27,9 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-6xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-6"
           >
-            Crypto that <br />
-            never stops. <br />
-            <span className="text-primary">Always connected.</span>
+            Send crypto <br />
+            from anywhere. <br />
+            <span className="text-primary">Even Offline.</span>
           </motion.h1>
 
           <motion.p
