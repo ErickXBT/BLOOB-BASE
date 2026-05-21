@@ -11,6 +11,7 @@ import WalletOnboarding from "@/pages/WalletOnboarding";
 import WalletApp from "@/pages/WalletApp";
 import TokenDetail from "@/pages/TokenDetail";
 import BetaPage from "@/pages/BetaPage";
+import DocsPage from "@/pages/DocsPage";
 import { WalletProvider } from "@/contexts/WalletContext";
 import { useEffect } from "react";
 
@@ -35,6 +36,7 @@ function App() {
               <Route path="/wallet/app" component={WalletApp} />
               <Route path="/wallet/token/:address" component={TokenDetail} />
               <Route path="/beta" component={BetaPage} />
+              <Route path="/docs" component={DocsPage} />
               <Route component={NotFound} />
             </Switch>
           </WouterRouter>

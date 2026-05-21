@@ -26,9 +26,9 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-6">
-          <a href="#docs" className="hidden sm:block text-sm font-medium text-muted-foreground hover:text-white transition-colors">
+          <Link href="/docs" className="hidden sm:block text-sm font-medium text-muted-foreground hover:text-white transition-colors">
             Docs
-          </a>
+          </Link>
           <Link href="/wallet">
             <Button className="bg-primary text-white hover:bg-primary/90 font-semibold rounded-full px-6">
               Get Started
