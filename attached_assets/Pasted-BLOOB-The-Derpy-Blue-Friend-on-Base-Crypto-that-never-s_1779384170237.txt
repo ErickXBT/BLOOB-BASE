@@ -1,0 +1,264 @@
+BLOOB — The Derpy Blue Friend on Base
+
+Crypto that never stops.
+Online, offline, anywhere.
+
+BLOOB is a next-generation crypto wallet built for the real world. Connected to the blockchain when internet is available, and powered by SMS relay technology when it isn't. One seamless experience, no matter where you are.
+
+HYBRID SYSTEM
+Two networks. One seamless experience.
+
+BLOOB intelligently adapts to your connection status and automatically chooses the fastest route for every transaction.
+
+No switching. No extra setup. No interruptions.
+
+Connected Mode
+Direct Chain Access
+
+When you're online, BLOOB interacts directly with the blockchain for lightning-fast transactions and complete ecosystem access.
+
+✓ Near-instant transaction confirmation
+✓ Access swaps, staking & DeFi protocols
+✓ Live portfolio synchronization
+✓ Real-time token pricing
+✓ Native blockchain performance
+
+Offline Mode
+SMS Relay Technology
+
+No internet available? No problem.
+
+BLOOB securely signs transactions directly on your device, then routes them through our distributed SMS relay network. Your transaction reaches the blockchain without needing mobile data or WiFi.
+
+✓ Works with basic GSM signal
+✓ Global relay support across 190+ regions
+✓ Transactions remain self-custodial
+✓ Automatic retry protection
+
+Your Device
+Signs Transaction
+
+↓
+
+BLOOB Engine
+Chooses Best Route
+
+↓
+
+Relay / RPC Layer
+Processes Request
+
+↓
+
+Blockchain Network
+Transaction Confirmed
+
+FEATURES
+Built for how crypto should actually work.
+
+Everything essential. Nothing unnecessary.
+
+OFFLINE
+Stay active without internet
+
+Send and receive crypto even in areas with weak connectivity. If your phone can send SMS, BLOOB works.
+
+AI
+AI Assistant Included
+
+Use natural language to interact with your wallet.
+
+Type:
+
+"Swap 20 USDC"
+"Check ETH price"
+"Send SOL to Alex"
+
+No complicated interfaces.
+
+DEFI
+DeFi in one place
+
+Trade, stake, bridge and grow your assets without jumping between apps.
+
+SECURITY
+True self-custody
+
+Keys are generated and stored on your device only.
+
+BLOOB never touches your assets, private keys, or transaction permissions.
+
+UX
+Wallet ready in seconds
+
+No signup process.
+
+No KYC forms.
+
+No waiting.
+
+Just install and start.
+
+MULTICHAIN
+Expanding beyond one ecosystem
+
+Launching on Base today.
+
+Ethereum, BNB and Solana integration arriving throughout 2026.
+
+MERCHANT ECOSYSTEM
+Accept crypto from anyone, anywhere.
+
+Whether you're a local shop owner or an online business, BLOOB makes payments practical worldwide.
+
+Payment Links & QR
+
+Create payment requests instantly using links or QR codes.
+
+Customers can even complete payments through SMS mode.
+
+Analytics Dashboard
+
+Monitor transaction history, revenue trends, and settlement data in one clean interface.
+
+CSV export included.
+
+API + Webhooks
+
+Connect BLOOB payment infrastructure into your application using developer APIs.
+
+Receive real-time payment callbacks automatically.
+
+Auto Settlement
+
+Convert incoming crypto into stablecoins or preferred currencies automatically.
+
+Less volatility. More simplicity.
+
+Merchant Beta Available
+
+No subscription fees.
+
+0.1% processing fee only.
+
+Settled via USDC or SOL.
+
+[Join Beta Program]
+
+HOW BLOOB WORKS
+Four simple steps.
+
+No internet required.
+
+01
+
+Open BLOOB
+
+Launch instantly. No registration needed.
+
+02
+
+Choose Your Asset
+
+Select BASE, USDC, or supported tokens.
+
+03
+
+Choose Recipient
+
+Wallet address
+
+Phone number
+
+or .Base identity
+
+04
+
+Send
+
+BLOOB automatically chooses the fastest available route.
+
+Online or offline.
+
+Offline mode detected
+
+SMS relay activated automatically.
+
+Transaction delivered and confirmed on-chain in under 60 seconds.
+
+ROADMAP
+Expanding across ecosystems
+
+Building toward a truly borderless wallet experience.
+
+BASE
+Live Now
+
+ETHEREUM
+Q3 2026
+
+BNB CHAIN
+Q4 2026
+
+SOLANA
+Q4 2026
+
+More integrations coming soon.
+
+FAQ
+Questions people ask most
+How can crypto work without internet?
+Is SMS mode secure?
+Which assets are currently supported?
+What happens if SMS delivery fails?
+Do users need registration?
+What makes BLOOB different?
+GET STARTED
+Crypto without limitations.
+
+Download BLOOB and start sending digital assets from almost anywhere on Earth.
+
+Android — Coming Soon
+
+iOS — Coming Soon
+
+Free forever · No KYC · Self-Custody First
+
+BLOOB LOGO
+
+BLOOB
+
+Connecting blockchain technology with the real world.
+
+Always connected. Even when you're not.
+
+NETWORK STATUS ● ONLINE
+99.97% Uptime
+
+Product
+
+Features
+How It Works
+Status
+Merchant Platform
+
+Developers
+
+Documentation
+API
+SDK
+GitHub
+Relay Infrastructure
+
+Company
+
+Roadmap
+News
+Privacy Policy
+Terms of Service
+
+© 2026 BLOOB Labs
+
+Built for the next billion users.
+
+Powered by BLOOB
