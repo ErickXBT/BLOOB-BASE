@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "wouter";
 import { motion } from "framer-motion";
-import { LogOut, Settings, Copy, Check, LayoutDashboard, ArrowUpRight, ArrowDownLeft, RefreshCw, ChevronDown, Key, Trash2, X } from "lucide-react";
+import { LogOut, Settings, Copy, Check, LayoutDashboard, ArrowUpRight, ArrowDownLeft, RefreshCw, Flame, ChevronDown, Key, Trash2, X } from "lucide-react";
 import { useWallet } from "@/contexts/WalletContext";
 import PortfolioTab from "@/components/wallet/PortfolioTab";
 import SendTab from "@/components/wallet/SendTab";
 import ReceiveTab from "@/components/wallet/ReceiveTab";
 import SwapTab from "@/components/wallet/SwapTab";
+import TrendingTab from "@/components/wallet/TrendingTab";
 import bloobLogo from "@assets/bloob_logo.png";
 
-type Tab = "portfolio" | "send" | "receive" | "swap";
+type Tab = "portfolio" | "send" | "receive" | "swap" | "trending";
 
 function truncate(s: string) {
   return s ? `${s.slice(0, 6)}…${s.slice(-4)}` : "";
@@ -38,7 +39,6 @@ function SettingsModal({ onClose }: { onClose: () => void }) {
           <button onClick={onClose} className="text-muted-foreground hover:text-white"><X className="w-4 h-4" /></button>
         </div>
 
-        {/* Private key */}
         <div className="bg-white/5 border border-white/8 rounded-2xl p-4">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
@@ -55,7 +55,6 @@ function SettingsModal({ onClose }: { onClose: () => void }) {
           {!showKey && <p className="text-xs text-muted-foreground">Reveal your private key to import into MetaMask, Phantom, or any EVM wallet.</p>}
         </div>
 
-        {/* Seed phrase */}
         {phrase && (
           <div className="bg-white/5 border border-white/8 rounded-2xl p-4">
             <div className="flex items-center justify-between mb-2">
@@ -74,7 +73,6 @@ function SettingsModal({ onClose }: { onClose: () => void }) {
           </div>
         )}
 
-        {/* Lock */}
         <button
           onClick={() => { lock(); navigate("/wallet"); }}
           className="w-full flex items-center justify-center gap-2 bg-white/6 border border-white/10 text-white font-bold rounded-2xl py-3 hover:bg-white/10 transition-all"
@@ -82,7 +80,6 @@ function SettingsModal({ onClose }: { onClose: () => void }) {
           <LogOut className="w-4 h-4" /> Lock Wallet
         </button>
 
-        {/* Delete */}
         {!confirmDelete ? (
           <button
             onClick={() => setConfirmDelete(true)}
@@ -105,7 +102,7 @@ function SettingsModal({ onClose }: { onClose: () => void }) {
 }
 
 export default function WalletApp() {
-  const { address, isLocked, hasWallet, refreshBalances, lock } = useWallet();
+  const { address, isLocked, hasWallet, refreshBalances } = useWallet();
   const [, navigate] = useLocation();
   const [activeTab, setActiveTab] = useState<Tab>("portfolio");
   const [copied, setCopied] = useState(false);
@@ -123,11 +120,12 @@ export default function WalletApp() {
     }
   };
 
-  const TABS: { id: Tab; label: string }[] = [
-    { id: "portfolio", label: "Portfolio" },
-    { id: "send",      label: "Send" },
-    { id: "receive",   label: "Receive" },
-    { id: "swap",      label: "Swap" },
+  const TABS: { id: Tab; label: string; icon: React.ReactNode }[] = [
+    { id: "portfolio", label: "Portfolio", icon: <LayoutDashboard className="w-3.5 h-3.5" /> },
+    { id: "send",      label: "Send",      icon: <ArrowUpRight className="w-3.5 h-3.5" /> },
+    { id: "receive",   label: "Receive",   icon: <ArrowDownLeft className="w-3.5 h-3.5" /> },
+    { id: "swap",      label: "Swap",      icon: <RefreshCw className="w-3.5 h-3.5" /> },
+    { id: "trending",  label: "Trending",  icon: <Flame className="w-3.5 h-3.5" /> },
   ];
 
   return (
@@ -142,13 +140,11 @@ export default function WalletApp() {
         </Link>
 
         <div className="flex items-center gap-2">
-          {/* Network badge */}
           <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-bold text-primary">Base</span>
           </div>
 
-          {/* Address */}
           <button
             onClick={copyAddress}
             className="flex items-center gap-1.5 px-3 py-1.5 bg-white/6 border border-white/10 rounded-full text-xs font-mono text-white hover:bg-white/10 transition-all"
@@ -166,14 +162,17 @@ export default function WalletApp() {
         </div>
       </header>
 
-      {/* Tab bar */}
-      <div className="flex border-b border-white/6 px-4">
+      {/* Tab bar — scrollable for 5 tabs */}
+      <div className="flex border-b border-white/6 overflow-x-auto scrollbar-none">
         {TABS.map(tab => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`relative flex-1 py-3 text-sm font-bold transition-colors ${activeTab === tab.id ? "text-white" : "text-muted-foreground hover:text-white/70"}`}
+            className={`relative flex items-center gap-1.5 flex-shrink-0 px-4 py-3 text-xs font-bold transition-colors ${
+              activeTab === tab.id ? "text-white" : "text-muted-foreground hover:text-white/70"
+            }`}
           >
+            {tab.icon}
             {tab.label}
             {activeTab === tab.id && (
               <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
@@ -195,6 +194,7 @@ export default function WalletApp() {
             {activeTab === "send"      && <SendTab />}
             {activeTab === "receive"   && <ReceiveTab />}
             {activeTab === "swap"      && <SwapTab />}
+            {activeTab === "trending"  && <TrendingTab />}
           </motion.div>
         </div>
       </div>

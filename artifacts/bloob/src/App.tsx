@@ -9,6 +9,7 @@ import RoadmapPage from "@/pages/RoadmapPage";
 import NetworkPage from "@/pages/NetworkPage";
 import WalletOnboarding from "@/pages/WalletOnboarding";
 import WalletApp from "@/pages/WalletApp";
+import TokenDetail from "@/pages/TokenDetail";
 import { WalletProvider } from "@/contexts/WalletContext";
 import { useEffect } from "react";
 
@@ -31,6 +32,7 @@ function App() {
               <Route path="/network" component={NetworkPage} />
               <Route path="/wallet" component={WalletOnboarding} />
               <Route path="/wallet/app" component={WalletApp} />
+              <Route path="/wallet/token/:address" component={TokenDetail} />
               <Route component={NotFound} />
             </Switch>
           </WouterRouter>
