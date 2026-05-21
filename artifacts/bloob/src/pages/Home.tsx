@@ -9,7 +9,7 @@ import Features from "@/components/sections/Features";
 import AiAssistant from "@/components/sections/AiAssistant";
 import Merchant from "@/components/sections/Merchant";
 import HowItWorks from "@/components/sections/HowItWorks";
-import Roadmap from "@/components/sections/Roadmap";
+import VideoFaq from "@/components/sections/VideoFaq";
 import Faq from "@/components/sections/Faq";
 import Cta from "@/components/sections/Cta";
 import Footer from "@/components/sections/Footer";
@@ -29,7 +29,7 @@ export default function Home() {
         <VideoAi />
         <Merchant />
         <HowItWorks />
-        <Roadmap />
+        <VideoFaq />
         <Faq />
         <Cta />
       </main>
