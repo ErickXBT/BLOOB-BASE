@@ -6,6 +6,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import SmsWallet from "@/pages/SmsWallet";
 import RoadmapPage from "@/pages/RoadmapPage";
+import NetworkPage from "@/pages/NetworkPage";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" component={Home} />
             <Route path="/sms-wallet" component={SmsWallet} />
             <Route path="/roadmap" component={RoadmapPage} />
+            <Route path="/network" component={NetworkPage} />
             <Route component={NotFound} />
           </Switch>
         </WouterRouter>

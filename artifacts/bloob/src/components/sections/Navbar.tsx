@@ -21,7 +21,7 @@ export default function Navbar() {
           <a href="#features" className="hover:text-white transition-colors">Features</a>
           <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
           <Link href="/roadmap" className="hover:text-white transition-colors">Roadmap</Link>
-          <a href="#network" className="hover:text-white transition-colors">Network</a>
+          <Link href="/network" className="hover:text-white transition-colors">Network</Link>
           <Link href="/sms-wallet" className="hover:text-white transition-colors">SMS Wallet</Link>
         </nav>
 
