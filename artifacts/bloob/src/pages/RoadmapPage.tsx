@@ -18,7 +18,7 @@ interface Phase {
 const PHASES: Phase[] = [
   {
     number: "01",
-    period: "Q1–Q2 2025",
+    period: "Q1–Q2 2026",
     status: "completed",
     title: "Phase 1: Base Launch",
     items: [
@@ -34,7 +34,7 @@ const PHASES: Phase[] = [
   },
   {
     number: "02",
-    period: "Q3 2025",
+    period: "Q3 2026",
     status: "in-progress",
     title: "Phase 2: Ecosystem Growth",
     description: "Expanding BLOOB's reach on Base with DeFi integrations, token incentives, and community governance.",
@@ -48,7 +48,7 @@ const PHASES: Phase[] = [
   },
   {
     number: "03",
-    period: "Q4 2025",
+    period: "Q4 2026",
     status: "upcoming",
     title: "Phase 3: Multi-Chain Bridge",
     items: [
@@ -60,7 +60,7 @@ const PHASES: Phase[] = [
   },
   {
     number: "04",
-    period: "Q2 2026",
+    period: "Q2 2027",
     status: "upcoming",
     title: "Phase 4: Merchant Platform",
     items: [
@@ -72,7 +72,7 @@ const PHASES: Phase[] = [
   },
   {
     number: "05",
-    period: "Q4 2026",
+    period: "Q4 2027",
     status: "upcoming",
     title: "Phase 5: Global Expansion",
     items: [
