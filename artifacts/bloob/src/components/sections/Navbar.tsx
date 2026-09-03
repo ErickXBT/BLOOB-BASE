@@ -17,9 +17,17 @@ export default function Navbar() {
           <span className="font-bold text-xl tracking-tight">BLOOB</span>
         </Link>
         
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-          <a href="#features" className="hover:text-white transition-colors">Features</a>
-          <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
+        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-muted-foreground">
+          <Link href="/stocks" className="hover:text-white transition-colors flex items-center gap-1 font-semibold text-white/90">
+            <span>Stocks</span>
+            <span className="text-[9px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-400 font-bold">RWA</span>
+          </Link>
+          <Link href="/analyzer" className="hover:text-white transition-colors font-semibold text-white/90">
+            Analyzer
+          </Link>
+          <Link href="/gallery" className="hover:text-white transition-colors font-semibold text-white/90">
+            Gallery
+          </Link>
           <Link href="/roadmap" className="hover:text-white transition-colors">Roadmap</Link>
           <Link href="/network" className="hover:text-white transition-colors">Network</Link>
           <Link href="/sms-wallet" className="hover:text-white transition-colors">SMS Wallet</Link>

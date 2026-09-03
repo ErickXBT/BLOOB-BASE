@@ -12,6 +12,9 @@ import WalletApp from "@/pages/WalletApp";
 import TokenDetail from "@/pages/TokenDetail";
 import BetaPage from "@/pages/BetaPage";
 import DocsPage from "@/pages/DocsPage";
+import StocksPage from "@/pages/StocksPage";
+import GalleryPage from "@/pages/GalleryPage";
+import AnalyzerPage from "@/pages/AnalyzerPage";
 import { WalletProvider } from "@/contexts/WalletContext";
 import { useEffect } from "react";
 
@@ -29,6 +32,9 @@ function App() {
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
             <Switch>
               <Route path="/" component={Home} />
+              <Route path="/stocks" component={StocksPage} />
+              <Route path="/gallery" component={GalleryPage} />
+              <Route path="/analyzer" component={AnalyzerPage} />
               <Route path="/sms-wallet" component={SmsWallet} />
               <Route path="/roadmap" component={RoadmapPage} />
               <Route path="/network" component={NetworkPage} />

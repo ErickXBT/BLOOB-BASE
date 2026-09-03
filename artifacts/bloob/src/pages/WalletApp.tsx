@@ -11,13 +11,16 @@ import SwapTab from "@/components/wallet/SwapTab";
 import TrendingTab from "@/components/wallet/TrendingTab";
 import SendTab from "@/components/wallet/SendTab";
 import ReceiveTab from "@/components/wallet/ReceiveTab";
+import StocksView from "@/components/stocks/StocksView";
+import TokenAnalyzerView from "@/components/analyzer/TokenAnalyzerView";
+import GalleryView from "@/components/gallery/GalleryView";
 import bloobLogo from "@assets/bloob_logo.png";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 const ETH_LOGO  = "https://assets.coingecko.com/coins/images/279/small/ethereum.png";
 const USDC_LOGO = "https://assets.coingecko.com/coins/images/6319/small/usdc.png";
 
-type MainTab    = "wallet" | "swap" | "trending" | "activity";
+type MainTab    = "wallet" | "swap" | "trending" | "stocks" | "analyzer" | "gallery" | "activity";
 type ModalPanel = "send" | "receive" | "settings" | null;
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -187,6 +190,9 @@ export default function WalletApp() {
     { id: "wallet",   label: "WALLET" },
     { id: "swap",     label: "SWAP" },
     { id: "trending", label: "TRENDING" },
+    { id: "stocks",   label: "STOCKS" },
+    { id: "analyzer", label: "ANALYZER" },
+    { id: "gallery",  label: "GALLERY" },
     { id: "activity", label: "ACTIVITY" },
   ];
 
@@ -431,16 +437,44 @@ export default function WalletApp() {
           {/* ── TRENDING TAB ── */}
           {mainTab === "trending" && (
             <motion.div key="trending" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
-              <div className="flex items-center justify-between mb-6">
-                <h1 className="text-2xl font-black tracking-tight">TRENDING</h1>
-                <div className="flex items-center gap-1.5 px-2.5 py-1 bg-orange-500/10 border border-orange-500/20 rounded-full">
-                  <Flame className="w-3 h-3 text-orange-400" />
-                  <span className="text-xs font-bold text-orange-400">Base Mainnet · Live</span>
+              <div className="flex items-center justify-between mb-5">
+                <div>
+                  <h1 className="text-2xl font-black tracking-tight">TRENDING COINS</h1>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    Real-time market feeds across Solana, Base, Robinhood & BSC
+                  </p>
+                </div>
+                <div className="flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-orange-500/15 via-purple-500/15 to-blue-500/15 border border-white/10 rounded-full">
+                  <Flame className="w-3.5 h-3.5 text-orange-400 animate-pulse" />
+                  <span className="text-xs font-black bg-gradient-to-r from-orange-400 via-purple-300 to-blue-400 bg-clip-text text-transparent">
+                    DexScreener Stream
+                  </span>
                 </div>
               </div>
-              <div className="max-w-2xl">
+              <div className="max-w-4xl">
                 <TrendingTab />
               </div>
+            </motion.div>
+          )}
+
+          {/* ── STOCKS TAB ── */}
+          {mainTab === "stocks" && (
+            <motion.div key="stocks" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
+              <StocksView />
+            </motion.div>
+          )}
+
+          {/* ── ANALYZER TAB ── */}
+          {mainTab === "analyzer" && (
+            <motion.div key="analyzer" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
+              <TokenAnalyzerView />
+            </motion.div>
+          )}
+
+          {/* ── GALLERY TAB ── */}
+          {mainTab === "gallery" && (
+            <motion.div key="gallery" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
+              <GalleryView />
             </motion.div>
           )}
 

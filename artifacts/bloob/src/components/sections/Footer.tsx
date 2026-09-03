@@ -6,10 +6,11 @@ const COLUMNS = [
     title: "Product",
     links: [
       { label: "BLOOB Wallet",     href: "/wallet",     internal: true  },
+      { label: "Stocks Market",    href: "/stocks",     internal: true  },
+      { label: "Token Analyzer",   href: "/analyzer",   internal: true  },
+      { label: "Media Gallery",    href: "/gallery",    internal: true  },
       { label: "SMS Wallet",       href: "/sms-wallet", internal: true  },
-      { label: "Merchant Beta",    href: "/beta",       internal: true  },
       { label: "Roadmap",          href: "/roadmap",    internal: true  },
-      { label: "Network",          href: "/network",    internal: true  },
     ],
   },
   {
@@ -25,11 +26,11 @@ const COLUMNS = [
   {
     title: "Explore",
     links: [
-      { label: "Features",         href: "/#features",           internal: true  },
-      { label: "How It Works",     href: "/#how-it-works",       internal: true  },
-      { label: "SMS Payments",     href: "/sms-wallet",          internal: true  },
+      { label: "Stocks Market",    href: "/stocks",              internal: true  },
+      { label: "Token Analyzer",   href: "/analyzer",            internal: true  },
+      { label: "Media Gallery",    href: "/gallery",             internal: true  },
       { label: "Network Status",   href: "/network",             internal: true  },
-      { label: "Security",         href: "/docs#network",        internal: true  },
+      { label: "Merchant Beta",    href: "/beta",                internal: true  },
     ],
   },
   {
