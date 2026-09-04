@@ -16,30 +16,29 @@ const COLUMNS = [
   {
     title: "Developers",
     links: [
-      { label: "Documentation",    href: "/docs",                internal: true  },
-      { label: "Quick Start",      href: "/docs#quickstart",     internal: true  },
-      { label: "Merchant API",     href: "/docs#merchant",       internal: true  },
-      { label: "Relay Network",    href: "/docs#sms",            internal: true  },
-      { label: "GitHub",           href: "https://github.com",   internal: false },
+      { label: "Documentation",    href: "/docs",         internal: true },
+      { label: "Quick Start",      href: "/quickstart",   internal: true },
+      { label: "Merchant API",     href: "/merchant-api", internal: true },
+      { label: "Relay Network",    href: "/network",      internal: true },
     ],
   },
   {
     title: "Explore",
     links: [
-      { label: "Stocks Market",    href: "/stocks",              internal: true  },
-      { label: "Token Analyzer",   href: "/analyzer",            internal: true  },
-      { label: "Media Gallery",    href: "/gallery",             internal: true  },
-      { label: "Network Status",   href: "/network",             internal: true  },
-      { label: "Merchant Beta",    href: "/beta",                internal: true  },
+      { label: "Stocks Market",    href: "/stocks",       internal: true },
+      { label: "Token Analyzer",   href: "/analyzer",     internal: true },
+      { label: "Media Gallery",    href: "/gallery",      internal: true },
+      { label: "Network Status",   href: "/network",      internal: true },
+      { label: "Merchant Beta",    href: "/beta",         internal: true },
     ],
   },
   {
     title: "Legal",
     links: [
-      { label: "Terms of Service", href: "#terms",   internal: false },
-      { label: "Privacy Policy",   href: "#privacy", internal: false },
-      { label: "Cookie Policy",    href: "#cookies", internal: false },
-      { label: "Licenses",         href: "#licenses",internal: false },
+      { label: "Terms of Service", href: "/terms",        internal: true },
+      { label: "Privacy Policy",   href: "/privacy",      internal: true },
+      { label: "Cookie Policy",    href: "/cookies",      internal: true },
+      { label: "Licenses",         href: "/licenses",     internal: true },
     ],
   },
 ];

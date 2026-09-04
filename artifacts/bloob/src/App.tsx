@@ -15,10 +15,26 @@ import DocsPage from "@/pages/DocsPage";
 import StocksPage from "@/pages/StocksPage";
 import GalleryPage from "@/pages/GalleryPage";
 import AnalyzerPage from "@/pages/AnalyzerPage";
+import QuickStartPage from "@/pages/QuickStartPage";
+import MerchantApiPage from "@/pages/MerchantApiPage";
+import TermsPage from "@/pages/TermsPage";
+import PrivacyPage from "@/pages/PrivacyPage";
+import CookiePage from "@/pages/CookiePage";
+import LicensesPage from "@/pages/LicensesPage";
 import { WalletProvider } from "@/contexts/WalletContext";
 import { useEffect } from "react";
 
+import { useLocation } from "wouter";
+
 const queryClient = new QueryClient();
+
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  return null;
+}
 
 function App() {
   useEffect(() => {
@@ -30,6 +46,7 @@ function App() {
       <TooltipProvider>
         <WalletProvider>
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+            <ScrollToTop />
             <Switch>
               <Route path="/" component={Home} />
               <Route path="/stocks" component={StocksPage} />
@@ -43,6 +60,12 @@ function App() {
               <Route path="/wallet/token/:address" component={TokenDetail} />
               <Route path="/beta" component={BetaPage} />
               <Route path="/docs" component={DocsPage} />
+              <Route path="/quickstart" component={QuickStartPage} />
+              <Route path="/merchant-api" component={MerchantApiPage} />
+              <Route path="/terms" component={TermsPage} />
+              <Route path="/privacy" component={PrivacyPage} />
+              <Route path="/cookies" component={CookiePage} />
+              <Route path="/licenses" component={LicensesPage} />
               <Route component={NotFound} />
             </Switch>
           </WouterRouter>
