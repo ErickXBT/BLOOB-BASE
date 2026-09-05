@@ -1,5 +1,7 @@
 import { Link } from "wouter";
+import { ExternalLink } from "lucide-react";
 import bloobLogo from "@assets/bloob_logo.png";
+import ambassadorBanner from "@assets/ambassador_program.jpg";
 
 const COLUMNS = [
   {
@@ -45,8 +47,29 @@ const COLUMNS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 pt-20 pb-8 bg-black">
+    <footer className="border-t border-white/5 pt-16 pb-8 bg-black">
       <div className="container mx-auto px-4 md:px-8">
+
+        {/* ── AMBASSADOR PROGRAM CARD ── */}
+        <div className="mb-16">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdq9MnFvwLeZufL2wE_W4Mixm7uIT0C2uxlDWt9xWQXpwfJHg/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-blue-500/30 hover:border-blue-400 shadow-2xl hover:shadow-[0_0_40px_rgba(37,99,235,0.35)] transition-all duration-300"
+          >
+            <img
+              src={ambassadorBanner}
+              alt="BLOOB Ambassador Program — Join Now"
+              className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-end justify-end p-4 sm:p-6">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-blue-600 font-black text-xs sm:text-sm shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                Join Now <ExternalLink className="w-3.5 h-3.5" />
+              </span>
+            </div>
+          </a>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 lg:gap-8 mb-20">
 
